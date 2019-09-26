@@ -1,10 +1,10 @@
 from django.db import models
 
 # Create your models here.
-class Theme(models.Model):
-    title = models.CharField('Theme Title', max_length =30)
-    description = models.CharField('Theme Description', max_length = 300)
-    image_url = models.CharField('Theme Image Url', max_length = 30)
+class Template(models.Model):
+    title = models.CharField('Template Title', max_length =30)
+    description = models.CharField('Template Description', max_length = 300)
+    image_url = models.CharField('Template Image Url', max_length = 300)
 
     def mean_rating(self):
         self.reviews.all() # get all ratings
@@ -21,10 +21,11 @@ class User(models.Model):
         return self.name
 
 class Review(models.Model):
-    theme = models.ForeignKey(Theme, on_delete=models.CASCADE)
+    review_title = models.CharField('Review Title', max_length=30, default=None)
+    template = models.ForeignKey(Template, on_delete=models.CASCADE, default=None)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    score = models.FloatField('Theme Score')
+    score = models.FloatField('Score')
     comment = models.CharField('Review Comment', max_length=300)
     
     def __str__(self):
-        return self.theme
+        return self.review_title
