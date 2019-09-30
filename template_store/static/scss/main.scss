@@ -1,46 +1,88 @@
+@import 'fonts.scss';
+
 html {
   scroll-behavior: smooth;
+  
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    
+    #page-one-container {
+      background: url('../images/orange_sky.jpeg') no-repeat center;
+      padding: 0;
+      margin: 0;
+      height: 100vw;
 
-  #page-one-container {
-    background: url('../images/orange_sky.jpeg') no-repeat center;
-    padding: 0;
-    margin: 0;
-    height: 100vw;
+      .header-jumbo {
+        .container {
+          .row {
+            .title-col {
+              color: white;
+              line-height: 0px;
+            }
 
-    .header-jumbo {
-      .container {
-        .row {
-          .title-col {
+          }
+        }
+        .nav-row {
+          width: 100%;
+          margin-top: 10vh;
+
+          button {
+            display: block;
+            margin: 15px auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border-radius: 0;
+            height: 100px;
+            font-size: 30px;
+          }
+        }
+      }
+
+
+    }
+    #page-two-container {
+      padding: 0;
+      margin: 0;
+      height: 100vw;
+
+      .templates-row {
+        width: 100%;
+        margin: 0;
+      }
+      .template-card {
+        padding: 10px;
+        margin: 10px 0;
+
+        .template-card-header {
+          h1 {
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        .template-description {
+          p {
+            font-weight: 300;
             color: white;
           }
-
+        }
+        .template-purchase {
+          width: 100%;
+          
+          button {
+            display: block;
+            margin: 5px auto;
+            border: none;
+            background-color: rgba(0,0,0, 0.53);
+            color: white;
+            padding: 5px 15px;
+          }
         }
       }
-      .nav-row {
-        width: 100%;
-        margin-top: 10vh;
-
-        button {
-          display: block;
-          margin: 15px auto;
-          background-color: rgba(0, 0, 0, 0.6);
-          color: white;
-          border-radius: 0;
-          height: 100px;
-        }
-      }
-    }
-
-
-  }
-  #page-two-container {
-    background: url('../images/underwater.jpeg') no-repeat center;
-    padding: 0;
-    margin: 0;
-    height: 100vw;
-
-    .title-col {
-      color: white;
     }
   }
 }

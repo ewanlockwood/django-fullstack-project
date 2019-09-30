@@ -30,30 +30,25 @@
     <!-- page one container END -->
 
     <!-- page two container START -->
-    <div id='page-two-container' class="page-container-1 container-fluid" style="padding: 0;">
-        <div id='packages-row' class="row">
+    <div id='page-two-container' class="page-container-2 container-fluid">
+        <div class="row templates-row">
             {% for obj in object_list %}
             <div class="col-xs-12 col-md-6 col-lg-4">
-                <div id="pbc" style='background-color: #C7AE8D;'>
-
-                    <div id="pbh">
+                <div class="template-card" style='background-color: {{ obj.color }}'>
+                    <div class="template-card-header">
                         <h1>{{ obj.title }}</h1>
                         <img src="{{ obj.image_url }}"></img>
                         <hr class="phr">
                     </div>
-
-                    <div id='pbcontent'>
+                    <div class='template-description'>
                         <p> {{ obj.description }} </p>
                     </div>
-
-                    <div id='pbf' style="background-color: #E3D9CC;"> </div>
-                    <div id="pbfu" style="border-right-color: #AA9274"></div>
+                    <div class="template-purchase">
+                        <button> PURCHASE </button>
+                    </div>
                 </div>
             </div>
             {% endfor %}
-            <!-- Bronze START -->
-            
-            <!-- Bronze END -->
         </div>
     </div>
     <!-- page two container END -->

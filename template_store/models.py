@@ -5,6 +5,7 @@ class Template(models.Model):
     title = models.CharField('Template Title', max_length =30)
     description = models.CharField('Template Description', max_length = 300)
     image_url = models.CharField('Template Image Url', max_length = 300)
+    color = models.CharField('Template Color', max_length = 10, default=None, null=True)
 
     def mean_rating(self):
         self.reviews.all() # get all ratings

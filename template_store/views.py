@@ -10,4 +10,5 @@ def index(request):
                 'title': 'List'
     }
     
+    
     return render(request, 'base.html', context)
