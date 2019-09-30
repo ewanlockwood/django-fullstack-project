@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, inital-scale">
@@ -7,10 +8,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Ewan Lockwood</title>
 </head>
+
 <body>
-    <!-- page container START -->
-    <div id='page-container' class="page-container container-fluid" style="padding: 0;">
-        <div class="header-jumbo jumbotron jumbotron-fluid">
+    <!-- page one container START -->
+    <div id='page-one-container' class="page-container-1 container-fluid" style="padding: 0;">
+        <div class="header-jumbo">
             <div class="container">
                 <div class="row">
                     <div class="title-col col-12">
@@ -18,16 +20,48 @@
                         <p class="lead">Full-Stack Web Developer</p>
                     </div>
                 </div>
-                <button type="button" class="btn" onClick="document.getElementById('more-info-row').scrollIntoView();"> About Me </button>
+                <div class="row nav-row">
+                    <button type="button" class="btn nav-btn col-12" onClick="document.getElementById('more-info-row').scrollIntoView();"> About Me </button>
+                    <button type="button" class="btn nav-btn col-12" onClick="document.getElementById('page-two-container').scrollIntoView();"> Templates </button>
+                </div>
             </div>
         </div>
     </div>
-    <!-- page container END -->
-    
+    <!-- page one container END -->
+
+    <!-- page two container START -->
+    <div id='page-two-container' class="page-container-1 container-fluid" style="padding: 0;">
+        <div id='packages-row' class="row">
+            {% for obj in object_list %}
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div id="pbc" style='background-color: #C7AE8D;'>
+
+                    <div id="pbh">
+                        <h1>{{ obj.title }}</h1>
+                        <img src="{{ obj.image_url }}"></img>
+                        <hr class="phr">
+                    </div>
+
+                    <div id='pbcontent'>
+                        <p> {{ obj.description }} </p>
+                    </div>
+
+                    <div id='pbf' style="background-color: #E3D9CC;"> </div>
+                    <div id="pbfu" style="border-right-color: #AA9274"></div>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- Bronze START -->
+            
+            <!-- Bronze END -->
+        </div>
+    </div>
+    <!-- page two container END -->
     <!-- Scripts start -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Scripts end -->
 </body>
+
 </html>

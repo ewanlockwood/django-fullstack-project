@@ -1,7 +1,28 @@
 html {
   scroll-behavior: smooth; }
-  html .page-container {
+  html #page-one-container {
+    background: url("../images/orange_sky.jpeg") no-repeat center;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    height: 100vw; }
+    html #page-one-container .header-jumbo .container .row .title-col {
+      color: white; }
+    html #page-one-container .header-jumbo .nav-row {
+      width: 100%;
+      margin-top: 10vh; }
+      html #page-one-container .header-jumbo .nav-row button {
+        display: block;
+        margin: 15px auto;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        border-radius: 0;
+        height: 100px; }
+  html #page-two-container {
+    background: url("../images/underwater.jpeg") no-repeat center;
+    padding: 0;
+    margin: 0;
+    height: 100vw; }
+    html #page-two-container .title-col {
+      color: white; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,10 +1,46 @@
 html {
   scroll-behavior: smooth;
-  
-  .page-container {
+
+  #page-one-container {
+    background: url('../images/orange_sky.jpeg') no-repeat center;
     padding: 0;
     margin: 0;
+    height: 100vw;
+
+    .header-jumbo {
+      .container {
+        .row {
+          .title-col {
+            color: white;
+          }
+
+        }
+      }
+      .nav-row {
+        width: 100%;
+        margin-top: 10vh;
+
+        button {
+          display: block;
+          margin: 15px auto;
+          background-color: rgba(0, 0, 0, 0.6);
+          color: white;
+          border-radius: 0;
+          height: 100px;
+        }
+      }
+    }
+
+
   }
-  
-  
+  #page-two-container {
+    background: url('../images/underwater.jpeg') no-repeat center;
+    padding: 0;
+    margin: 0;
+    height: 100vw;
+
+    .title-col {
+      color: white;
+    }
+  }
 }
