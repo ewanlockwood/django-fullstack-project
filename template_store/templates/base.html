@@ -10,35 +10,34 @@
 </head>
 
 <body>
+    <!-- Navigation START -->
+    <!-- Navigation END -->
+    
     <!-- page one container START -->
-    <div id='page-one-container' class="page-container-1 container-fluid" style="padding: 0;">
-        <div class="header-jumbo">
-            <div class="container">
-                <div class="row">
-                    <div class="title-col col-12">
-                        <h1>Ewan Lockwood</h1>
-                        <p class="lead">Full-Stack Web Developer</p>
-                    </div>
-                </div>
-                <div class="row nav-row">
-                    <button type="button" class="btn nav-btn col-12" onClick="document.getElementById('more-info-row').scrollIntoView();"> About Me </button>
-                    <button type="button" class="btn nav-btn col-12" onClick="document.getElementById('page-two-container').scrollIntoView();"> Templates </button>
-                </div>
+    <div id='page-one-container' class="page-container container-fluid">
+        <div class="row title-row">
+            <div class="title-col col-12">
+                <h1>EWAN <span>LOCKWOOD</span></h1>
             </div>
         </div>
+            
+            <!--<div class="row nav-row">-->
+            <!--    <button type="button" class="btn nav-btn col-12" onClick="document.getElementById('page-three-container').scrollIntoView();"> About Me </button>-->
+            <!--    <button type="button" class="btn nav-btn col-12" onClick="document.getElementById('page-two-container').scrollIntoView();"> Templates </button>-->
+            <!--</div>-->
     </div>
     <!-- page one container END -->
 
     <!-- page two container START -->
-    <div id='page-two-container' class="page-container-2 container-fluid">
-        <div class="row templates-row">
+    <div id='page-two-container' class="page-container container-fluid">
+        <div class="row">
             {% for obj in object_list %}
             <div class="col-xs-12 col-md-6 col-lg-4">
                 <div class="template-card" style='background-color: {{ obj.color }}'>
                     <div class="template-card-header">
                         <h1>{{ obj.title }}</h1>
                         <img src="{{ obj.image_url }}"></img>
-                        <hr class="phr">
+                        <hr/>
                     </div>
                     <div class='template-description'>
                         <p> {{ obj.description }} </p>
@@ -52,6 +51,12 @@
         </div>
     </div>
     <!-- page two container END -->
+
+    <!-- page three container START -->
+    <!--<div id='page-three-container' class="page-container container-fluid">-->
+    <!--</div>-->
+    <!-- page three container END -->
+
     <!-- Scripts start -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
