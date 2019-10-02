@@ -22,7 +22,7 @@ html {
         left: 0;
         background-color: #fff;
         overflow-x: hidden;
-        padding-top: 60px;
+        padding: 60px 0 0 0;
         transition: 0.7s; }
         html body #navigation-bar #menu .close {
           position: absolute;
@@ -31,6 +31,14 @@ html {
           margin-left: 50px;
           font-size: 30;
           color: #000; }
+        html body #navigation-bar #menu .row {
+          padding: 200px 0px; }
+          html body #navigation-bar #menu .row a {
+            height: 74px;
+            text-align: center;
+            font-size: 45px;
+            color: black;
+            text-transform: uppercase; }
     html body .page-container {
       height: 100vh; }
     html body #page-one-container {

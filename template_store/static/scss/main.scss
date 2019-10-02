@@ -6,32 +6,32 @@ html {
   body {
     font-family: 'Josefin Sans', sans-serif;
     overflow-x: hidden;
-    
-    
+
+
     #navigation-bar {
       padding: 0 15px;
       transition: margin-left 0.7s;
       overflow: hidden;
       width: 100%;
-      
+
       #nav-icon a {
         font-size: 30px;
         color: #fff;
         position: fixed;
       }
-      
-      #menu{
+
+      #menu {
         height: 100vh;
         width: 0px;
         position: fixed;
         z-index: 1;
         top: 0;
         left: 0;
-        background-color:#fff;
+        background-color: #fff;
         overflow-x: hidden;
-        padding-top: 60px;
+        padding: 60px 0 0 0;
         transition: 0.7s;
-        
+
         .close {
           position: absolute;
           top: 8px;
@@ -40,31 +40,41 @@ html {
           font-size: 30;
           color: #000;
         }
+        .row {
+          padding: 200px 0px;
+          a {
+            height: 74px;
+            text-align: center;
+            font-size: 45px;
+            color: black;
+            text-transform: uppercase;
+          }
+        }
       }
     }
-    
+
     .page-container {
       height: 100vh;
     }
     #page-one-container {
       background: url('../images/orange_sky.jpeg') no-repeat center;
-      
+
       .title-row {
-          .title-col {
-            color: white;
-            text-align: center;
-            letter-spacing: -2px;
-            font-size: 45px;
-            margin-top: 15px;
-            
-            h1 {
-              font-weight: 300;
-              
-              span {
-                font-weight: 600;
-              }
+        .title-col {
+          color: white;
+          text-align: center;
+          letter-spacing: -2px;
+          font-size: 45px;
+          margin-top: 15px;
+
+          h1 {
+            font-weight: 300;
+
+            span {
+              font-weight: 600;
             }
           }
+        }
       }
       .nav-row {
         margin: 20px 10px;
@@ -83,43 +93,42 @@ html {
     #page-two-container {
       .row {
         .template-card {
-        padding: 10px;
-        margin: 10px 0;
-        color: white;
+          padding: 10px;
+          margin: 10px 0;
+          color: white;
 
-        .template-card-header {
-          h1 {
-            text-transform: uppercase;
-            text-align: center;
-            font-weight: 600;
+          .template-card-header {
+            h1 {
+              text-transform: uppercase;
+              text-align: center;
+              font-weight: 600;
+            }
+            img {
+              width: 100%;
+            }
           }
-          img {
+          .template-description {
+            p {
+              font-weight: 300;
+            }
+          }
+          .template-purchase {
             width: 100%;
-          }
-        }
-        .template-description {
-          p {
-            font-weight: 300;
-          }
-        }
-        .template-purchase {
-          width: 100%;
 
-          button {
-            display: block;
-            margin: 5px auto;
-            border: none;
-            background-color: rgba(0, 0, 0, 0.53);
-            color: white;
-            padding: 5px 15px;
+            button {
+              display: block;
+              margin: 5px auto;
+              border: none;
+              background-color: rgba(0, 0, 0, 0.53);
+              color: white;
+              padding: 5px 15px;
+            }
           }
         }
       }
-      }
-      
+
     }
-    #page-three-container {
-    }
+    #page-three-container {}
   }
 
 }
