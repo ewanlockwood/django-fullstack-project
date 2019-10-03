@@ -3,9 +3,10 @@ from django.db import models
 # Create your models here.
 class Template(models.Model):
     title = models.CharField('Template Title', max_length =30)
-    description = models.CharField('Template Description', max_length = 300)
+    description = models.TextField()
     image_url = models.CharField('Template Image Url', max_length = 300)
     color = models.CharField('Template Color', max_length = 10, default=None, null=True)
+    price = models.DecimalField(max_digits=6, decimal_places=2, default=None, null=True)
 
     def mean_rating(self):
         self.reviews.all() # get all ratings
