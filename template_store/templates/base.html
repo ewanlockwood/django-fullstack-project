@@ -24,6 +24,10 @@
                 <a onClick="document.getElementById('page-three-container').scrollIntoView();" class='col-12'> <i class='fas fa-user-circle icon'> </i> About </a>
                 <a onClick="document.getElementById('page-two-container').scrollIntoView();"class='col-12'> <i class='fas fa-images icon'>  </i>Templates </a>
                 <a href="#" class='col-12'> <i class='fab fa-wpforms icon'>  </i>Contact </a>
+                <a href="#" class='col-3 accounts-nav'> <i class='fab fa-wpforms icon'>  </i>Contact </a>
+                <a href="#" class='col-3 accounts-nav'> <i class='fab fa-wpforms icon'>  </i>Contact </a>
+                <a href="#" class='col-3 accounts-nav'> <i class='fab fa-wpforms icon'>  </i>Contact </a>
+                <a href="#" class='col-3 accounts-nav'> <i class='fab fa-wpforms icon'>  </i>Contact </a>
             </div>
         </div>
     </div>
@@ -60,7 +64,7 @@
                     </div>
                     <div class="template-purchase">
                         <p> £{{ obj.price }} </p>
-                        <form method='post' action='{% url "add_to_cart" obj.id %}'>
+                        <form method='post' action=''>
                             {% csrf_token %}
                             <div class="input-group">
                                 <input type="number" name="quantity" min='1' max='99' class='form-control' placeholder='Quantity'/>
